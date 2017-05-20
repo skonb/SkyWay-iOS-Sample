@@ -15,8 +15,8 @@
 
 // Enter your APIkey and Domain
 // Please check this page. >> https://skyway.io/ds/
-static NSString *const kAPIkey = @"yourAPIKEY";
-static NSString *const kDomain = @"yourDomain";
+static NSString *const kAPIkey = @"4050f535-fc75-468e-82f8-a4d5c16cf7bf";
+static NSString *const kDomain = @"value-domain.com";
 
 
 typedef NS_ENUM(NSUInteger, ViewTag)
@@ -168,7 +168,7 @@ typedef NS_ENUM(NSUInteger, AlertType)
     }
     rcLocal.origin.x = rcScreen.size.width - rcLocal.size.width - 8.0f;
     rcLocal.origin.y = rcScreen.size.height - rcLocal.size.height - 8.0f;
-    rcLocal.origin.y -= self.navigationController.toolbar.frame.size.height;
+    rcLocal.origin.y -= self.navigationController.toolbar.frame.size.height * 2;
     
     
     
@@ -229,7 +229,8 @@ typedef NS_ENUM(NSUInteger, AlertType)
     CGRect rcChange = rcScreen;
     rcChange.size.width = rcScreen.size.width;
     rcChange.size.height = fnt.lineHeight * 2.0f;
-    rcChange.origin.y = rcScreen.size.height - rcChange.size.height;
+    rcChange.origin.y = rcScreen.size.height - rcChange.size.height * 2;
+    
     
     UIButton* btnChange = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [btnChange setFrame:rcChange];
@@ -238,7 +239,26 @@ typedef NS_ENUM(NSUInteger, AlertType)
     [btnChange addTarget:self action:@selector(cycleLocalCamera) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:btnChange];
-
+    
+    
+    UISwitch * switchVideoEnabled = [UISwitch new];
+    switchVideoEnabled.on = YES;
+    CGRect rcVideoEnabled = rcScreen;
+    rcVideoEnabled.size.width = 50;
+    rcVideoEnabled.origin.y = rcScreen.size.height - switchVideoEnabled.frame.size.height;
+    rcVideoEnabled.origin.x = 100;
+    [switchVideoEnabled setFrame:rcVideoEnabled];
+    [switchVideoEnabled addTarget:self action:@selector(videoEnabledButtonDidChange:) forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:switchVideoEnabled];
+    UILabel *label = [[UILabel alloc]initWithFrame:rcVideoEnabled];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.text = @"Video enabled";
+    label.frame = ^(CGRect rect){
+        rect.origin = CGPointMake(rect.origin.x + rect.size.width , rect.origin.y);
+        rect.size = CGSizeMake(rcScreen.size.width - rect.size.width, rect.size.width);
+        return rect;
+    } (rcVideoEnabled);
+    [self.view addSubview:label];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -314,6 +334,12 @@ typedef NS_ENUM(NSUInteger, AlertType)
 		
 		[_mediaConnection close];
 	}
+}
+
+-(void) videoEnabledButtonDidChange:(UISwitch*)sw{
+    for(int i = 0 ; i < _msLocal.getVideoTracks; ++i){
+        [_msLocal setEnableVideoTrack:i enable:sw.on];
+    }
 }
 
 - (void)closedMedia

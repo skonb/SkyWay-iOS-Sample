@@ -13,8 +13,8 @@
 
 // Enter your APIkey and Domain
 // Please check this page. >> https://skyway.io/ds/
-static NSString *const kAPIkey = @"yourAPIKEY";
-static NSString *const kDomain = @"yourDomain";
+static NSString *const kAPIkey = @"1a8d9d69-ef04-483d-97f7-ea6cee98a5e0";
+static NSString *const kDomain = @"herokuappcom";
 
 
 typedef NS_ENUM(NSUInteger, ViewTag)
