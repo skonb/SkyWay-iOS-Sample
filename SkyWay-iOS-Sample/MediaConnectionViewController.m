@@ -240,25 +240,6 @@ typedef NS_ENUM(NSUInteger, AlertType)
     
     [self.view addSubview:btnChange];
     
-    
-    UISwitch * switchVideoEnabled = [UISwitch new];
-    switchVideoEnabled.on = YES;
-    CGRect rcVideoEnabled = rcScreen;
-    rcVideoEnabled.size.width = 50;
-    rcVideoEnabled.origin.y = rcScreen.size.height - switchVideoEnabled.frame.size.height;
-    rcVideoEnabled.origin.x = 100;
-    [switchVideoEnabled setFrame:rcVideoEnabled];
-    [switchVideoEnabled addTarget:self action:@selector(videoEnabledButtonDidChange:) forControlEvents:UIControlEventValueChanged];
-    [self.view addSubview:switchVideoEnabled];
-    UILabel *label = [[UILabel alloc]initWithFrame:rcVideoEnabled];
-    label.textAlignment = NSTextAlignmentCenter;
-    label.text = @"Video enabled";
-    label.frame = ^(CGRect rect){
-        rect.origin = CGPointMake(rect.origin.x + rect.size.width , rect.origin.y);
-        rect.size = CGSizeMake(rcScreen.size.width - rect.size.width, rect.size.width);
-        return rect;
-    } (rcVideoEnabled);
-    [self.view addSubview:label];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -336,9 +317,15 @@ typedef NS_ENUM(NSUInteger, AlertType)
 	}
 }
 
--(void) videoEnabledButtonDidChange:(UISwitch*)sw{
+-(IBAction) videoEnabledButtonDidChange:(UISwitch*)sw{
     for(int i = 0 ; i < _msLocal.getVideoTracks; ++i){
         [_msLocal setEnableVideoTrack:i enable:sw.on];
+    }
+}
+
+-(IBAction) audioEnabledButtonDidChange:(UISwitch*)sw{
+    for(int i = 0 ; i < _msLocal.getAudioTracks; ++i){
+        [_msLocal setEnableAudioTrack:i enable:sw.on];
     }
 }
 

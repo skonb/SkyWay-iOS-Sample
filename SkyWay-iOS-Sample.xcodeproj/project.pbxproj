@@ -24,13 +24,13 @@
 		CA30CBFE1AE4E53A00A78322 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DAABD7A19D5644200C765E1 /* LaunchScreen.xib */; };
 		CA30CBFF1AE4E53C00A78322 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DAABD7519D5644200C765E1 /* Main.storyboard */; };
 		CA6859CB1B1BE47200B9577E /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = CA6859CA1B1BE47200B9577E /* image.png */; };
-		CA6C359B1BCE09A800F99F7D /* SkyWay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA6C359A1BCE09A800F99F7D /* SkyWay.framework */; };
 		CAC6AFC51C27B4DF002C856D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC6AFC41C27B4DF002C856D /* libc++.tbd */; };
 		CAC6AFC71C27B4FA002C856D /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC6AFC61C27B4FA002C856D /* libicucore.tbd */; };
 		CAC6AFC91C27B505002C856D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC6AFC81C27B505002C856D /* libsqlite3.tbd */; };
 		CAC6AFCB1C27B50F002C856D /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC6AFCA1C27B50F002C856D /* libstdc++.6.0.9.tbd */; };
 		CAD2621C1B8E9EAF000D4782 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD2621A1B8E9EAF000D4782 /* CoreVideo.framework */; };
 		CAD2621D1B8E9EAF000D4782 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD2621B1B8E9EAF000D4782 /* VideoToolbox.framework */; };
+		FD4DCDF61E65686400C6DB1C /* SkyWay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD4DCDF51E65686400C6DB1C /* SkyWay.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +57,9 @@
 		3DD0C75A19E7B6BD006F9103 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3DDB8D961A314B2F00FA2C4A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3DDB8D9A1A314C3C00FA2C4A /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		48EEACDC44BF5F83AE730795 /* Pods-SkyWay-iOS-Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyWay-iOS-Sample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SkyWay-iOS-Sample/Pods-SkyWay-iOS-Sample.debug.xcconfig"; sourceTree = "<group>"; };
+		77C9A8E10045AA1A3402783F /* Pods-SkyWay-iOS-Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyWay-iOS-Sample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SkyWay-iOS-Sample/Pods-SkyWay-iOS-Sample.release.xcconfig"; sourceTree = "<group>"; };
+		C43B4529734AEBCD5998B6C6 /* libPods-SkyWay-iOS-Sample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SkyWay-iOS-Sample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA6859CA1B1BE47200B9577E /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
 		CA6C359A1BCE09A800F99F7D /* SkyWay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SkyWay.framework; path = "SkyWay-iOS-Sample/frameworks/SkyWay.framework"; sourceTree = "<group>"; };
 		CAC6AFC41C27B4DF002C856D /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
@@ -65,6 +68,8 @@
 		CAC6AFCA1C27B50F002C856D /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		CAD2621A1B8E9EAF000D4782 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		CAD2621B1B8E9EAF000D4782 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		FD4DCDF31E6567CB00C6DB1C /* libPods-SkyWay-iOS-Sample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-SkyWay-iOS-Sample.a"; path = "Pods/../build/Release-iphoneos/libPods-SkyWay-iOS-Sample.a"; sourceTree = "<group>"; };
+		FD4DCDF51E65686400C6DB1C /* SkyWay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SkyWay.framework; path = "Pods/SkyWay-iOS-SDK/SkyWay.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +90,7 @@
 				3DD0C75B19E7B6BD006F9103 /* Foundation.framework in Frameworks */,
 				3DDB8D9B1A314C3C00FA2C4A /* GLKit.framework in Frameworks */,
 				3DDB8D971A314B2F00FA2C4A /* SystemConfiguration.framework in Frameworks */,
-				CA6C359B1BCE09A800F99F7D /* SkyWay.framework in Frameworks */,
+				FD4DCDF61E65686400C6DB1C /* SkyWay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +103,8 @@
 				3DF7608D19D910FC0084F124 /* Framework */,
 				3DAABD6919D5644200C765E1 /* Products */,
 				3DAABD6A19D5644200C765E1 /* SkyWay-iOS-Sample */,
+				583F90F6D7DE829D6F308ABE /* Pods */,
+				428706A27F030E23450C27F0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,6 +168,25 @@
 			name = Framework;
 			sourceTree = "<group>";
 		};
+		428706A27F030E23450C27F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD4DCDF51E65686400C6DB1C /* SkyWay.framework */,
+				FD4DCDF31E6567CB00C6DB1C /* libPods-SkyWay-iOS-Sample.a */,
+				C43B4529734AEBCD5998B6C6 /* libPods-SkyWay-iOS-Sample.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		583F90F6D7DE829D6F308ABE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				48EEACDC44BF5F83AE730795 /* Pods-SkyWay-iOS-Sample.debug.xcconfig */,
+				77C9A8E10045AA1A3402783F /* Pods-SkyWay-iOS-Sample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -168,9 +194,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3DAABD8B19D5644200C765E1 /* Build configuration list for PBXNativeTarget "SkyWay-iOS-Sample" */;
 			buildPhases = (
+				59AA83E94E12FE8D1468DA94 /* [CP] Check Pods Manifest.lock */,
 				3DAABD6419D5644200C765E1 /* Sources */,
 				3DAABD6519D5644200C765E1 /* Frameworks */,
 				3DAABD6619D5644200C765E1 /* Resources */,
+				073AFAE7FC97DBCC40036580 /* [CP] Embed Pods Frameworks */,
+				3D627322448C92CC157451D3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,7 +221,7 @@
 				TargetAttributes = {
 					3DAABD6719D5644200C765E1 = {
 						CreatedOnToolsVersion = 6.0.1;
-						DevelopmentTeam = YP76R8KFZE;
+						DevelopmentTeam = E33A2PPZWJ;
 					};
 				};
 			};
@@ -227,6 +256,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		073AFAE7FC97DBCC40036580 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SkyWay-iOS-Sample/Pods-SkyWay-iOS-Sample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3D627322448C92CC157451D3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SkyWay-iOS-Sample/Pods-SkyWay-iOS-Sample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59AA83E94E12FE8D1468DA94 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3DAABD6419D5644200C765E1 /* Sources */ = {
@@ -351,19 +428,22 @@
 		};
 		3DAABD8C19D5644200C765E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48EEACDC44BF5F83AE730795 /* Pods-SkyWay-iOS-Sample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = E33A2PPZWJ;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SkyWay-iOS-Sample/frameworks",
+					"$(PROJECT_DIR)/Pods/SkyWay-iOS-SDK",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/SkyWay-iOS-Sample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/build/Release-iphoneos";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -378,19 +458,22 @@
 		};
 		3DAABD8D19D5644200C765E1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77C9A8E10045AA1A3402783F /* Pods-SkyWay-iOS-Sample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = E33A2PPZWJ;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SkyWay-iOS-Sample/frameworks",
+					"$(PROJECT_DIR)/Pods/SkyWay-iOS-SDK",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/SkyWay-iOS-Sample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/build/Release-iphoneos";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"-ObjC",

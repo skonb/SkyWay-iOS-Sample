@@ -100,7 +100,7 @@ typedef NS_ENUM(NSUInteger, ViewTag)
 		if (BTN_VIDEOCHAT == btn.tag)
 		{
 			// Video chat
-			MediaConnectionViewController* vcVideoChat = [[MediaConnectionViewController alloc] initWithNibName:nil bundle:[NSBundle mainBundle]];
+            MediaConnectionViewController* vcVideoChat = [[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:@"mediaConnection"];
             NSString* strTitle = @"MediaConnection";
             [vcVideoChat.navigationItem setTitle:strTitle];
 			
