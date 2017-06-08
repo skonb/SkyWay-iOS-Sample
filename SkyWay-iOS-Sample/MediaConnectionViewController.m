@@ -11,6 +11,7 @@
 
 #import "AppDelegate.h"
 #import "PeersListViewController.h"
+#import "SkyWay_iOS_Sample-Swift.h"
 
 
 // Enter your APIkey and Domain
@@ -44,8 +45,11 @@ typedef NS_ENUM(NSUInteger, AlertType)
 	NSString*			_strOwnId;
 	BOOL				_bConnected;
 	
+    
 }
 
+    @property (nonatomic ,strong) ChatViewController* chatVC;
+    @property (nonatomic, weak) IBOutlet UIView *chatContainer;
 @end
 
 @implementation MediaConnectionViewController
@@ -240,6 +244,7 @@ typedef NS_ENUM(NSUInteger, AlertType)
     
     [self.view addSubview:btnChange];
     
+    [self.view bringSubviewToFront:self.chatContainer];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -290,6 +295,9 @@ typedef NS_ENUM(NSUInteger, AlertType)
 	
 	[self setMediaCallbacks:_mediaConnection];
     
+    [_chatVC updateTopicWithTopic:_strOwnId];
+    [_chatVC startSubscription];
+    
     //////////////////////////////////////////////////////////////////////
     /////////////////// END: Call SkyWay Peer   //////////////////////////
     //////////////////////////////////////////////////////////////////////
@@ -309,6 +317,7 @@ typedef NS_ENUM(NSUInteger, AlertType)
 			}
 			
 			[_msRemote close];
+            [_chatVC endSubscription];
 			
 			_msRemote = nil;
 		}
@@ -359,6 +368,8 @@ typedef NS_ENUM(NSUInteger, AlertType)
 							if (YES == [obj isKindOfClass:[NSString class]])
 							{
                                 _strOwnId = (NSString *)obj;
+                                [_chatVC connectWithId:_strOwnId];
+                                _chatVC.senderId = _strOwnId;
                                 
                                 UILabel* lbl = (UILabel*)[self.view viewWithTag:TAG_ID];
                                 if (nil != lbl)
@@ -385,12 +396,15 @@ typedef NS_ENUM(NSUInteger, AlertType)
 			 
 			 [self setMediaCallbacks:_mediaConnection];
              [_mediaConnection answer:_msLocal];
+             [_chatVC updateTopicWithTopic:_mediaConnection.peer];
+             [_chatVC startSubscription];
 		 }
 	 }];
 	
 	// !!!: Event/Close
 	[peer on:SKW_PEER_EVENT_CLOSE callback:^(NSObject* obj)
 	 {
+         [_chatVC endSubscription];
 	 }];
 	
 	// !!!: Event/Disconnected
@@ -698,5 +712,11 @@ typedef NS_ENUM(NSUInteger, AlertType)
 	
 }
 
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"embed_chat"]){
+        self.chatVC = segue.destinationViewController;
+    }
+}
 
 @end

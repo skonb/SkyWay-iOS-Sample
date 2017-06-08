@@ -14,7 +14,8 @@
 #import <arpa/inet.h>
 
 #import <SkyWay/SKWPeer.h>
-
+@import AWSCore;
+@import AWSIoT;
 
 @interface AppDelegate ()
 
@@ -26,6 +27,17 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 	// Override point for customization after application launch.
+    AWSCognitoCredentialsProvider *credentialsProvider = [[AWSCognitoCredentialsProvider alloc]
+                                                          initWithRegionType:AWSRegionAPNortheast1
+                                                          identityPoolId:@"ap-northeast-1:8848275d-4dbc-4acb-a0ff-2c70acb57760"];
+    
+    
+    AWSServiceConfiguration *configuration = [[AWSServiceConfiguration alloc] initWithRegion:AWSRegionAPNortheast1 credentialsProvider:credentialsProvider];
+    
+    [AWSServiceManager defaultServiceManager].defaultServiceConfiguration = configuration;
+    
+    [AWSIoTDataManager registerIoTDataManagerWithConfiguration:configuration forKey:@"default"];
+    
 
 	return YES;
 }
